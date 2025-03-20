@@ -4,6 +4,7 @@ import { observer } from "mobx-react-lite";
 import { createRoot } from "react-dom/client";
 import { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./css/highlight.css";
 import "./css/tailwind.css";
 import "./i18n";
@@ -27,5 +28,5 @@ const Main = observer(() => (
 
   const container = document.getElementById("root");
   const root = createRoot(container as HTMLElement);
-  root.render(<Main />);
+  root.render(<HelmetProvider><Main /></HelmetProvider>);
 })();
