@@ -34,7 +34,7 @@ const RenameTagDialog: React.FC<Props> = (props: Props) => {
 
     try {
       await memoServiceClient.renameMemoTag({
-        parent: "memos/-",
+        parent: "posts/-",
         oldTag: tag,
         newTag: newName,
       });

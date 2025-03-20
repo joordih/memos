@@ -551,7 +551,7 @@ func (s *APIV1Service) RenameMemoTag(ctx context.Context, request *v1pb.RenameMe
 		PayloadFind:     &store.FindMemoPayload{TagSearch: []string{request.OldTag}},
 		ExcludeComments: true,
 	}
-	if (request.Parent) != "memos/-" {
+	if (request.Parent) != "posts/-" {
 		memoUID, err := ExtractMemoUIDFromName(request.Parent)
 		if err != nil {
 			return nil, status.Errorf(codes.InvalidArgument, "invalid memo name: %v", err)
@@ -602,7 +602,7 @@ func (s *APIV1Service) DeleteMemoTag(ctx context.Context, request *v1pb.DeleteMe
 		ExcludeContent:  true,
 		ExcludeComments: true,
 	}
-	if request.Parent != "memos/-" {
+	if request.Parent != "posts/-" {
 		memoUID, err := ExtractMemoUIDFromName(request.Parent)
 		if err != nil {
 			return nil, status.Errorf(codes.InvalidArgument, "invalid memo name: %v", err)

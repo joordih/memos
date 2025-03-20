@@ -20,7 +20,7 @@ const EmbeddedMemo = ({ resourceId: uid, params: paramsStr }: Props) => {
   const context = useContext(RendererContext);
   const loadingState = useLoading();
   const memoStore = useMemoStore();
-  const memoName = `memos/${uid}`;
+  const memoName = `posts/${uid}`;
   const memo = memoStore.getMemoByName(memoName);
 
   useEffect(() => {
