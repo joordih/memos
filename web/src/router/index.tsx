@@ -135,7 +135,7 @@ const router = createBrowserRouter([
             ),
           },
           {
-            path: "memos/:uid",
+            path: "posts/:uid",
             element: (
               <Suspense fallback={<Loading />}>
                 <MemoDetail />
@@ -144,7 +144,7 @@ const router = createBrowserRouter([
           },
           // Redirect old path to new path.
           {
-            path: "m/:uid",
+            path: "p/:uid",
             element: (
               <Suspense fallback={<Loading />}>
                 <MemoDetailRedirect />
