@@ -102,7 +102,7 @@ const AddMemoRelationPopover = (props: Props) => {
         editorRef.current.insertText("\n");
       }
       for (const memo of selectedMemos) {
-        editorRef.current.insertText(`![[memos/${extractMemoIdFromName(memo.name)}]]\n`);
+        editorRef.current.insertText(`![[posts/${extractMemoIdFromName(memo.name)}]]\n`);
       }
       setTimeout(() => {
         editorRef.current?.scrollToCursor();

@@ -40,7 +40,7 @@ const TagsSection = observer((props: Props) => {
     const confirmed = window.confirm(t("tag.delete-confirm"));
     if (confirmed) {
       await memoServiceClient.deleteMemoTag({
-        parent: "memos/-",
+        parent: "posts/-",
         tag: tag,
       });
       toast.success(t("message.deleted-successfully"));

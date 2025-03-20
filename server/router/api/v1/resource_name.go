@@ -12,7 +12,7 @@ import (
 const (
 	WorkspaceSettingNamePrefix = "settings/"
 	UserNamePrefix             = "users/"
-	MemoNamePrefix             = "memos/"
+	MemoNamePrefix             = "posts/"
 	ResourceNamePrefix         = "resources/"
 	InboxNamePrefix            = "inboxes/"
 	IdentityProviderNamePrefix = "identityProviders/"
