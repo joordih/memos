@@ -22,7 +22,7 @@ jobs:
 
     - name: Clone Repo
       run: |
-        export LATEST_APP=$(wget -qO- https://api.github.com/joordih/memos/tags | gawk -F '["v]' '/name/{print "v"$5;exit}')
+        export LATEST_APP=$(wget -qO- https://api.github.com/repos/joordih/memos/tags | gawk -F '["v]' '/name/{print "v"$5;exit}')
         git clone -b $LATEST_APP https://github.com/joordih/memos
         npm install -g pnpm
 
