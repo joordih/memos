@@ -170,7 +170,7 @@ const MemoView: React.FC<Props> = (props: Props) => {
         <title>{title} - JJ Development</title>
         <meta name="title" property="og:title" content={`${title} - JJ Development`} />
         <meta name="description" property="og:description" content={description} />
-        <meta name="image" property="og:image" content={getResourceUrl(memo.resources[0])} />
+        <meta name="image" property="og:image" content={memo.resources && memo.resources[0] ? getResourceUrl(memo.resources[0]) : ''} />
       </Helmet>
       <div
         className={cn(
