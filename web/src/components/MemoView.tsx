@@ -64,7 +64,6 @@ const MemoView: React.FC<Props> = (props: Props) => {
   const currentUser = useCurrentUser();
   const user = useCurrentUser();
   const memoStore = useMemoStore();
-  const image = memo.resources[0].type === "image/png" ? memo.resources[0].externalLink : null;
   const [showEditor, setShowEditor] = useState<boolean>(false);
   const [creator, setCreator] = useState(userStore.getUserByName(memo.creator));
   const [showNSFWContent, setShowNSFWContent] = useState(props.showNsfwContent);
